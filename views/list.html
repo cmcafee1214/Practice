@@ -1,0 +1,15 @@
+<a href="/compose">Write a New Post</a>
+<div class="post-container">
+    <div class="post" ng-repeat="p in posts">
+        <h3>{{ p.title }}</h3>
+        <h5>Written By {{ p.authorfirstname }} {{ p.authorlastname }}</h5>
+        <h5>{{ p.createdAt | date: 'short' }}</h5>
+        <p><a ng-href="/{{ p.id }}">Read more</a></p>
+    </div>
+</div>
+
+
+
+
+<!-- p.title = title, authorfirstname, authorlastname refers to table columns (some inner joined)  -->
+<!-- in controllers.js, 'PostListController' -->
